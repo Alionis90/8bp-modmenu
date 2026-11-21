@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#0b0e14"/>
+      <stop offset="70%" stop-color="#0b0e14"/>
+      <stop offset="100%" stop-color="#0b0e14"/>
+    </radialGradient>
+    <radialGradient id="ballGrad" cx="38%" cy="32%" r="55%">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="40%" stop-color="#0b0e14"/>
+      <stop offset="100%" stop-color="#0b0e14"/>
+    </radialGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#00e5ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pinkGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff2d6f" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#ff2d6f" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ff2d6f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="256" height="256" fill="#0b0e14"/>
+
+  <!-- Subtle underground arcade grid -->
+  <g opacity="0.06" stroke="#00e5ff" stroke-width="0.5" fill="none">
+    <line x1="0" y1="64" x2="256" y2="64"/>
+    <line x1="0" y1="128" x2="256" y2="128"/>
+    <line x1="0" y1="192" x2="256" y2="192"/>
+    <line x1="64" y1="0" x2="64" y2="256"/>
+    <line x1="128" y1="0" x2="128" y2="256"/>
+    <line x1="192" y1="0" x2="192" y2="256"/>
+  </g>
+
+  <!-- Outer neon rim glow around mark -->
+  <circle cx="120" cy="118" r="82" fill="url(#pinkGlow)" opacity="0.35"/>
+  <circle cx="120" cy="118" r="78" fill="none" stroke="#ff2d6f" stroke-width="2" opacity="0.5"/>
+
+  <!-- Chrome accent ring -->
+  <circle cx="120" cy="118" r="74" fill="none" stroke="#e8f1ff" stroke-width="1.2" opacity="0.25"/>
+
+  <!-- Main 8-ball body (offset composition) -->
+  <g>
+    <!-- Ball shadow / depth -->
+    <ellipse cx="120" cy="120" rx="62" ry="60" fill="#0b0e14" opacity="0.8"/>
+
+    <!-- Ball main body -->
+    <circle cx="118" cy="116" r="58" fill="url(#ballGrad)"/>
+
+    <!-- Ball chrome rim-light (left edge highlight) -->
+    <path d="M 62 110 A 56 56 0 0 1 76 68 A 58 58 0 0 0 60 116 A 56 56 0 0 0 70 150 A 58 58 0 0 1 62 110 Z" fill="#e8f1ff" opacity="0.22"/>
+
+    <!-- Ball neon rim-light (right edge cyan) -->
+    <path d="M 174 108 A 56 56 0 0 0 160 160 A 58 58 0 0 1 176 116 A 58 58 0 0 0 166 74 A 56 56 0 0 1 174 108 Z" fill="#00e5ff" opacity="0.35"/>
+
+    <!-- 8 circle on ball -->
+    <circle cx="118" cy="108" r="24" fill="#e8f1ff" opacity="0.92"/>
+    <circle cx="118" cy="108" r="20" fill="#0b0e14"/>
+    <path d="M 108 94 L 128 94 L 128 100 L 114 100 L 114 106 L 126 106 L 126 112 L 114 112 L 114 122 L 108 122 Z" fill="#e8f1ff" opacity="0.9"/>
+    <path d="M 128 100 L 128 106 M 128 112 L 128 122" stroke="#e8f1ff" stroke-width="2" opacity="0.9" fill="none"/>
+
+    <!-- Crack along equator - jagged split -->
+    <path d="M 60 116 
+             L 72 112 L 80 118 L 92 110 L 104 120 L 116 112 
+             L 128 118 L 140 110 L 152 120 L 164 112 L 174 118 
+             L 178 116" 
+          stroke="#e8f1ff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Inner crack glow -->
+    <path d="M 60 116 
+             L 72 112 L 80 118 L 92 110 L 104 120 L 116 112 
+             L 128 118 L 140 110 L 152 120 L 164 112 L 174 118 
+             L 178 116" 
+          stroke="#00e5ff" stroke-width="1" fill="none" opacity="0.8" stroke-linecap="round"/>
+
+    <!-- Lower half of ball separating -->
+    <path d="M 60 116 A 58 58 0 0 0 178 116 Z" fill="#0b0e14" opacity="0.85"/>
+
+    <!-- Separated lower half with slight gap -->
+    <path d="M 62 120 A 56 56 0 0 0 174 120 L 172 126 A 54 54 0 0 1 64 126 Z" fill="#0b0e14"/>
+    <path d="M 62 120 A 56 56 0 0 0 174 120" fill="none" stroke="#ff2d6f" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Glowing cue stick spilling from crack -->
+    <!-- Stick shaft -->
+    <path d="M 80 122 L 170 78" stroke="#e8f1ff" stroke-width="3.5" stroke-linecap="round" opacity="0.85"/>
+    <!-- Stick tip glow -->
+    <circle cx="170" cy="78" r="4" fill="#00e5ff" opacity="0.9"/>
+    <circle cx="170" cy="78" r="7" fill="url(#glowGrad)" opacity="0.6"/>
+    <!-- Stick ferrule -->
+    <path d="M 162 82 L 168 79" stroke="#ff2d6f" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+    <!-- Stick butt -->
+    <path d="M 80 122 L 74 125" stroke="#e8f1ff" stroke-width="4.5" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Glow particles spilling from crack -->
+    <circle cx="96" cy="118" r="2" fill="#00e5ff" opacity="0.8"/>
+    <circle cx="110" cy="114" r="1.5" fill="#ff2d6f" opacity="0.7"/>
+    <circle cx="132" cy="116" r="2" fill="#00e5ff" opacity="0.6"/>
+    <circle cx="148" cy="114" r="1.5" fill="#ff2d6f" opacity="0.5"/>
+    <circle cx="88" cy="120" r="1" fill="#e8f1ff" opacity="0.6"/>
+    <circle cx="120" cy="112" r="1.2" fill="#00e5ff" opacity="0.7"/>
+
+    <!-- Ball spec highlight -->
+    <ellipse cx="92" cy="92" rx="10" ry="6" fill="#e8f1ff" opacity="0.1" transform="rotate(-30 92 92)"/>
+  </g>
+
+  <!-- Underground chrome accent lines -->
+  <path d="M 28 200 L 48 200" stroke="#e8f1ff" stroke-width="1" opacity="0.15"/>
+  <path d="M 208 56 L 228 56" stroke="#ff2d6f" stroke-width="1" opacity="0.2"/>
+  <path d="M 200 210 L 220 210" stroke="#00e5ff" stroke-width="0.8" opacity="0.15"/>
+
+  <!-- Corner brackets - tool panel vibe -->
+  <path d="M 20 20 L 20 44 M 20 20 L 44 20" stroke="#00e5ff" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M 236 20 L 236 44 M 236 20 L 212 20" stroke="#00e5ff" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M 20 236 L 20 212 M 20 236 L 44 236" stroke="#ff2d6f" stroke-width="1.5" fill="none" opacity="0.25"/>
+  <path d="M 236 236 L 236 212 M 236 236 L 212 236" stroke="#ff2d6f" stroke-width="1.5" fill="none" opacity="0.25"/>
+
+  <!-- Small wordmark -->
+  <text x="128" y="244" font-family="monospace" font-size="8" fill="#e8f1ff" opacity="0.3" text-anchor="middle" letter-spacing="3">8BP-MODMENU</text>
+</svg>
